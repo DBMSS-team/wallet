@@ -13,6 +13,7 @@ const walletSchema = new Schema(
 
 const walletHistorySchema = new Schema(
 	{
+		wallet_id: { type: String, required: true },
 		payment_id: { type: String, required: true },
 		amount: { type: Decimal128, required: true },
 	},
