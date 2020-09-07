@@ -1,3 +1,0 @@
-[submodule "commons"]
-	path = srv/commons
-	url = https://github.com/DBMSS-team/commons.git
