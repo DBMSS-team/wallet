@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
@@ -13,8 +13,8 @@ const walletSchema = new Schema(
 
 const walletHistorySchema = new Schema(
 	{
-		wallet_id: { type: String, required: true },
-		payment_id: { type: String, required: true },
+		walletId: { type: String, required: true },
+		paymentId: { type: String, required: true },
 		amount: { type: Decimal128, required: true },
 	},
 	{
@@ -22,7 +22,7 @@ const walletHistorySchema = new Schema(
 	}
 );
 
-const Wallet = mongoose.model('Wallet', walletSchema);
-const WalletHistory = mongoose.model('WalletHistory', walletHistorySchema);
+const Wallet = mongoose.model("Wallet", walletSchema);
+const WalletHistory = mongoose.model("WalletHistory", walletHistorySchema);
 
 module.exports = { Wallet, walletSchema, WalletHistory, walletHistorySchema };
