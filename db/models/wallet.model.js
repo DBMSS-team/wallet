@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const walletSchema = new Schema(
 	{
-		amount: { type: Decimal128, required: true },
+		amount: { type: mongoose.Types.Decimal128, required: true },
 	},
 	{
 		timestamps: true,
@@ -15,7 +15,7 @@ const walletHistorySchema = new Schema(
 	{
 		walletId: { type: String, required: true },
 		paymentId: { type: String, required: true },
-		amount: { type: Decimal128, required: true },
+		amount: { type: mongoose.Types.Decimal128, required: true },
 	},
 	{
 		timestamps: true,
